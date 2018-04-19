@@ -6,6 +6,7 @@ class TestSorting(unittest.TestCase):
 
 	def setUp(self):
 		self.list_to_sort = [3,8,3,6,1]
+		self.number_of_elements = len(self.list_to_sort)
 
 	def test_prepare_to_print(self):
 		string_list = sorting.prepare_to_print(self.list_to_sort)
@@ -16,9 +17,16 @@ class TestSorting(unittest.TestCase):
 		pass
 
 	def test_bubble_sort(self):
-		sorted_list = sorting.bubble_sort(self.list_to_sort)
+		sorted_list = sorting.bubble_sort(
+			self.list_to_sort,
+			self.number_of_elements)
 		self.assertEqual(sorted_list, [1,3,3,6,8])
 
+	def test_selection_sort(self):
+		sorted_list = sorting.selection_sort(
+			self.list_to_sort,
+			self.number_of_elements)
+		self.assertEqual(sorted_list, [1,3,3,6,8])
 
 if __name__ == "__main__":
 	unittest.main()
