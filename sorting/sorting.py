@@ -1,4 +1,3 @@
-
 import sys
 
 LIST_TO_SORT = [5,4,2,6,7,1,9,3,7,2]
@@ -51,6 +50,7 @@ def selection_sort(list_to_sort):
 
 
 def insertion_sort():
+    print("test")
     return True
 
 
