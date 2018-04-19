@@ -51,6 +51,7 @@ def selection_sort(list_to_sort):
 
 def insertion_sort():
     print("test")
+    print("one more test")
     return True
 
 
