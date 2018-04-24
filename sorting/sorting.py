@@ -49,10 +49,14 @@ def selection_sort(list_to_sort):
     return sorted_list
 
 
-def insertion_sort():
-    print("test")
-    print("one more test")
-    return True
+def insertion_sort(list_to_sort):
+
+    if list_to_sort[0] > list_to_sort[1]:
+        current_value = list_to_sort[0]
+        list_to_sort[0] = list_to_sort[1]
+        list_to_sort[1] = current_value
+
+    return list_to_sort
 
 
 def main(argv):
@@ -60,15 +64,23 @@ def main(argv):
     print(prepare_to_print(LIST_TO_SORT))
     print("\n")
 
+    # Bubble sort.
     calculate_and_show_results(
         'bubble',
         bubble_sort,
-        LIST_TO_SORT)    
+        LIST_TO_SORT)
+
+    # Selection sort.
     calculate_and_show_results(
         'selection',
         selection_sort,
         LIST_TO_SORT)    
 
+    # Insertion sort.
+    calculate_and_show_results(
+        'insertion',
+        insertion_sort,
+        LIST_TO_SORT)
 
 if __name__ == "__main__":
     main(sys.argv)

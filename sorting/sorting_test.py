@@ -30,5 +30,10 @@ class TestSorting(unittest.TestCase):
 			self.list_to_sort)
 		self.assertEqual(sorted_list, [1,3,3,6,8])
 
+	def test_insertion_sort(self):
+		sorted_list = sorting.insertion_sort(
+			self.list_to_sort)
+		self.assertEqual(sorted_list, [1,3,3,6,8])
+
 if __name__ == "__main__":
 	unittest.main()
